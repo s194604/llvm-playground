@@ -29,7 +29,7 @@ set( NEWLIB_INCLUDES # List of dirs from which to get only the files
 )
 set( PACKAGE_ITEMS
 	# Package binaries
-	"bin/llc" "bin/llvm-link" "bin/clang-12" "bin/llvm-config" "bin/llvm-objdump" "bin/opt"
+	"bin/llc" "bin/llvm-link" "bin/clang-13" "bin/llvm-config" "bin/llvm-objdump" "bin/opt"
 	
 	# Moved binaries 
 	"${PACKAGE_TEMP_DIR}/bin/clang" # Actually a symlink
@@ -74,7 +74,7 @@ add_custom_command(
 )
 
 ADD_CUSTOM_TARGET(symlink-clang
-	COMMAND ${CMAKE_COMMAND} -E create_symlink patmos-clang-12 ${PACKAGE_TEMP_DIR}/bin/clang
+	COMMAND ${CMAKE_COMMAND} -E create_symlink patmos-clang-13 ${PACKAGE_TEMP_DIR}/bin/clang
 	DEPENDS clang PatmosPackageTempDirs		  
 	)		  
 # Build release tarball containing binaries and metadata
