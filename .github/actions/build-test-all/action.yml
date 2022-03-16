@@ -79,7 +79,7 @@ runs:
       if: inputs.enable-tests == 'true'
       uses: ./.github/actions/build-test
       with:
-        targets: UnitTests FileCheck count not lli llvm-strip llvm-install-name-tool dsymutil lli-child-target llvm-as llvm-bcanalyzer llvm-config llvm-cov llvm-cxxdump llvm-cvtres llvm-diff llvm-dis llvm-dwarfdump llvm-exegesis llvm-extract llvm-isel-fuzzer llvm-ifs llvm-jitlink llvm-opt-fuzzer llvm-lib llvm-link llvm-lto llvm-lto2 llvm-mc llvm-mca llvm-modextract llvm-nm llvm-objdump llvm-pdbutil llvm-profdata llvm-ranlib llvm-rc llvm-readelf llvm-rtdyld llvm-size llvm-split llvm-strings llvm-undname llvm-c-test llvm-cxxfilt llvm-xray yaml2obj obj2yaml yaml-bench verify-uselistorder bugpoint llc llvm-symbolizer opt sancov sanstats llvm-addr2line
+        targets: UnitTests FileCheck count not lli llvm-strip llvm-install-name-tool dsymutil lli-child-target llvm-as llvm-bcanalyzer llvm-config llvm-cov llvm-cxxdump llvm-cvtres llvm-diff llvm-dis llvm-dwarfdump llvm-exegesis llvm-extract llvm-isel-fuzzer llvm-ifs llvm-jitlink llvm-opt-fuzzer llvm-lib llvm-link llvm-lto llvm-lto2 llvm-mc llvm-mca llvm-modextract llvm-nm llvm-objdump llvm-pdbutil llvm-profdata llvm-ranlib llvm-rc llvm-readelf llvm-rtdyld llvm-size llvm-split llvm-strings llvm-undname llvm-c-test llvm-cxxfilt llvm-xray yaml2obj obj2yaml yaml-bench verify-uselistorder bugpoint llc llvm-symbolizer opt sancov sanstats llvm-addr2line llvm-otool llvm-profgen llvm-sim llvm-stress llvm-tapi-diff llvm-windres
         path: ${{env.LLVM_PATH}}/test
         working-dir: ${{env.BUILD_PATH}}
         include: LLVM-Unit.*(${{inputs.include-only}})
@@ -88,7 +88,7 @@ runs:
       if: inputs.enable-tests == 'true'
       uses: ./.github/actions/build-test
       with:
-        targets: BugpointPasses llvm-cat llvm-opt-report llvm-mt llvm-dwp llvm-reduce llvm-lipo llvm-dlltool llvm-cxxmap llvm-cfi-verify split-file llvm-bitcode-strip llvm-dlltool llvm-opt-report llvm-lipo llvm-ml llvm-libtool-darwin llvm-gsymutil llvm-dwp llvm-mt llvm-cfi-verify llvm-cxxmap llvm-cat llvm-reduce
+        targets: BugpointPasses llvm-cat llvm-opt-report llvm-mt llvm-dwp llvm-reduce llvm-lipo llvm-dlltool llvm-cxxmap llvm-cfi-verify split-file llvm-bitcode-strip llvm-dlltool llvm-opt-report llvm-lipo llvm-ml llvm-libtool-darwin llvm-gsymutil llvm-dwp llvm-mt llvm-cfi-verify llvm-cxxmap llvm-cat llvm-reduce llvm-otool llvm-profgen llvm-sim llvm-stress llvm-tapi-diff llvm-windres
         path: ${{env.LLVM_PATH}}/test 
         working-dir: ${{env.BUILD_PATH}}
         include: ${{inputs.include-only}}
